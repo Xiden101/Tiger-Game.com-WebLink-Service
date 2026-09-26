@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Link</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <img class="logo" src="tiger.png" alt="Tiger game.com">
+
+    <section class="link-panel">
+      <div class="field-label-row">
+        <label class="field-label" for="port-select">Select COM</label>
+        <div class="corner-btns">
+          <button id="help-btn" class="help-btn" type="button" aria-label="Help" title="Help">?</button>
+          <button id="quit-btn" class="help-btn quit-btn" type="button" aria-label="Close Web Link" title="Close Web Link">&times;</button>
+        </div>
+      </div>
+      <select id="port-select">
+        <option value="" disabled selected>No ports found</option>
+      </select>
+
+      <button id="connect-btn" class="btn btn-primary">Connect</button>
+
+      <div class="status-row" id="status-row" hidden>
+        <span class="led" id="led"></span>
+        <span id="status-text"></span>
+      </div>
+    </section>
+
+    <section class="results" id="results" hidden>
+      <div class="tabs" role="tablist">
+        <button class="tab active" id="tab-highscores" role="tab" aria-selected="true">High Scores</button>
+        <button class="tab" id="tab-cheats" role="tab" aria-selected="false">Download Cheat</button>
+      </div>
+
+      <div class="panel" id="panel-highscores" role="tabpanel">
+        <div class="table-frame">
+          <table class="data-table" id="score-table">
+            <thead>
+              <tr><th>Game</th><th>Score</th></tr>
+            </thead>
+            <tbody id="score-body">
+              <!-- rows injected here -->
+            </tbody>
+          </table>
+        </div>
+        <button id="submit-scores-btn" class="btn btn-secondary">Submit Scores</button>
+      </div>
+
+      <div class="panel" id="panel-cheats" role="tabpanel" hidden>
+        <div class="table-frame">
+          <table class="data-table" id="cheats-table">
+            <thead>
+              <tr><th></th><th>Game</th><th>Cheat</th></tr>
+            </thead>
+            <tbody id="cheats-body">
+              <tr class="empty-row"><td colspan="3">No cheats loaded yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <button id="download-cheat-btn" class="btn btn-secondary" disabled>Download Cheat</button>
+        <div id="cheat-status" class="status-row" hidden>
+          <span class="led" id="cheat-led"></span>
+          <span id="cheat-status-text"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="help-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="help-title">
+      <div class="modal-header">
+        <h2 id="help-title">Tiger Game.Com Web Link Usage</h2>
+        <button id="help-close-btn" class="modal-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ol class="help-steps">
+          <li>
+            Connect your Tiger game.com Web Link or Tiger game.com Internet Cable to your computer.
+            <ol type="a" class="help-substeps">
+              <li><strong>Web Link:</strong> use a standard DB25 serial-to-USB cable.</li>
+              <li><strong>Internet Cable:</strong> use a null-modem DB25 serial-to-USB cable (a male-to-male gender changer adapter may be required).</li>
+            </ol>
+          </li>
+          <li>Power on the game.com and launch Web Link.</li>
+          <li>Press Start and wait for <em>"Linking..."</em> to appear on screen.</li>
+          <li>Select the COM port your cable is connected to, then click <strong>Connect</strong>.</li>
+        </ol>
+        <p class="help-footer">For more information visit <span class="help-footer-link">gamecom.dreampipe.net</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="submit-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="submit-title">
+      <div class="modal-header">
+        <h2 id="submit-title">Submit Scores</h2>
+        <button id="submit-close-btn" class="modal-close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Enter the one-time code from the website (click "click here" on the Web Link page to get one).</p>
+        <label class="field-label" for="submit-code-input">One-Time Code</label>
+        <input type="text" id="submit-code-input" class="code-input" inputmode="numeric" pattern="[0-9]*" maxlength="6" placeholder="000000" autocomplete="off">
+        <div id="submit-code-error" class="error-banner" hidden></div>
+        <button id="submit-code-btn" class="btn btn-primary" style="margin-top: 16px;">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

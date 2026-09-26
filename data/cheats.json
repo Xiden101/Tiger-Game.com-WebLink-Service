@@ -1,0 +1,6 @@
+{
+  "gameId": "FMEGAMIX",
+  "gameName": "Fighters Megamix",
+  "description": "Unlock all Characters",
+  "command": "--poke \"25=0x0f\""
+}

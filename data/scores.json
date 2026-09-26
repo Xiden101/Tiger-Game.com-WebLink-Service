@@ -1,0 +1,12 @@
+[
+  {
+    "gameId": "FMEGAMIX",
+    "gameName": "Fighters Megamix",
+    "exclude": true
+  },
+  {
+    "gameId": "INDY500",
+    "gameName": "Indy 500",
+    "exclude": false
+  }
+]
