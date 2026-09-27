@@ -37,7 +37,7 @@ HOST = "127.0.0.1"
 # Where scores get sent. The app posts here directly from Python, so the
 # website tab that's showing the one-time code can pick up the results.
 UPLOAD_URL = "https://gamecom.dreampipe.net/upload.php"
-API_KEY = "TiGeRgAmEcOm1995@"
+API_KEY = "TiGeRgAmEcOm1995@" #API KEY IS OPTIONAL
 PORT = 5151
 
 DATA_DIR = Path(__file__).parent / "data"
