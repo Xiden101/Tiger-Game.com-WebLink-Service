@@ -1,6 +1,6 @@
 # Tiger game.com Web Link
 
-A modern replacement for the PC side of the Tiger game.com **Web Link**. Connect your game.com to your computer, see the high scores saved on your cartridge, upload them to the online leaderboards, and send cheats back to your games.
+A modern replacement for the PC side of the **Tiger game.com Web Link**. Connect your game.com to your computer, see the high scores saved on your cartridge, upload them to the online leaderboards, and send cheats back to your games.
 
 It runs as a small local program that opens in your web browser.
 
