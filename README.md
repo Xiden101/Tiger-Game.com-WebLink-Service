@@ -8,19 +8,19 @@ It runs as a small local program that opens in your web browser.
 
 - **High Scores** – reads every score saved on your game.com and shows them by game.
 - **Submit Scores** – uploads your scores to the leaderboards at [gamecom.dreampipe.net](https://gamecom.dreampipe.net) using a one-time code from the website.
-- **Download Cheat** – downloads cheeats for supported titles to your game.com.
+- **Download Cheat** – downloads cheats for supported titles to your game.com.
 - Stays linked until you click **Disconnect**, so you can send several cheats without reconnecting.
 
 ## What you need
 
 - A Tiger game.com
 - A Tiger game.com **Web Link** cartridge
-- Tiger weblink cable plus a standard DB25 serial-to-USB cable **or** Internet Cable plus a null-modem DB25 serial-to-USB cable (a male-to-male gender changer adapter may be required).
+- Tiger Weblink cable plus a standard DB25 serial-to-USB cable **or** Internet Cable plus a null-modem DB25 serial-to-USB cable (a male-to-male gender changer adapter may be required).
 - A computer with [Python](https://www.python.org/downloads/) 3.9 or newer
 
 ## Installing
 
-Download this repository (green **Code** button → **Download ZIP**, then unzip it), open a command prompt in the folder, and install the two requirements:
+Download this repository, open a command prompt in the folder, and install the two requirements:
 
 ```
 python -m pip install -r requirements.txt
