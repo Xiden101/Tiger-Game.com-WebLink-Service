@@ -86,22 +86,6 @@ The files in `data/` control what the program shows. Edit them with any text edi
 
 `command` sets bytes in that game's saved record: `--poke "OFFSET=VALUE"`, with several pairs separated by commas (for example `"25=0x0f,26=0x01"`). Offsets count from the start of the game's 64-byte record.
 
-## Project layout
-
-```
-app.py                  local web server: COM ports, connecting, scores, cheats
-requirements.txt
-data/
-  scores.json           game names and exclusions
-  cheats.json           available cheats
-static/
-  gamecom_link.py       game.com Web Link serial protocol
-  index.html            the program's page
-  app.js                page behavior
-  style.css             page styling
-  tiger.png             logo
-```
-
 ## Notes
 
 This is a fan project and is not affiliated with Tiger Electronics or Hasbro. game.com is a trademark of its respective owner.
