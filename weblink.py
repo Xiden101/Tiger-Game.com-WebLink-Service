@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""Web Link GUI -- a small local web app around gamecom_link.py.
-
-Run it with:  python app.py
-It starts a local server and opens your browser to it automatically.
-"""
 from __future__ import annotations
 
 import json
